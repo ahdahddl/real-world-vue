@@ -3,7 +3,7 @@
 </template>
 
 <script>
-    export default {
-        name: 'Eventlist'
-    };
+export default {
+  name: 'Eventlist',
+}
 </script>
