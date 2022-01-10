@@ -1,11 +1,16 @@
 <template>
-  <div class="icon-wrapper" v-html="svg">
-    Icon</div>
+  <div class="icon-wrapper">
+    <svg class="icon" :width="width" :height="height">
+      <use v-bind="{ 'xlink:href': '/feather-sprite.svg#' + name }" />
+    </svg>
+    <slot></slot> // newly added slot
+  </div>
 </template>
 
 <script>
 /* eslint-disable prettier/prettier */
 import feather from 'feather-icons'
+
 export default {
   props: {
     name: String,
@@ -39,6 +44,7 @@ export default {
   font-weight: 600;
   margin-right: 6px;
 }
+
 .icon {
   stroke: currentColor;
   stroke-width: 2;
